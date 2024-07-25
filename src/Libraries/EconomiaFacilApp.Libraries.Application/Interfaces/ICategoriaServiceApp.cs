@@ -7,6 +7,6 @@ public interface ICategoriaServiceApp
     public Task<IEnumerable<ReadCategoriaDto>> ObterCategorias();
     public ReadCategoriaDto? ObterCategoriaPeloId(int id);
     public Task<bool> CadastrarCategoria(CreateCategoriaDto categoriaDto);
-    public Task<bool> AtualizarCategoria(UpdateCategoriaDto categoriaDto);
+    public Task<bool> AtualizarCategoria(int id, UpdateCategoriaDto categoriaDto);
     public Task<bool> ExcluirCategoria(int id);
 }

@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Libraries\EconomiaFacilApp.Libraries.Application\EconomiaFacilApp.Libraries.Application.csproj" />
     <ProjectReference Include="..\Libraries\EconomiaFacilApp.Libraries.Domain\EconomiaFacilApp.Libraries.Domain.csproj" />
     <ProjectReference Include="..\Libraries\EconomiaFacilApp.Libraries.Infrastructure\EconomiaFacilApp.Libraries.Infrastructure.csproj" />

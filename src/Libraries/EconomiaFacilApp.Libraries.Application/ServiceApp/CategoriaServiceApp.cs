@@ -29,9 +29,11 @@ public class CategoriaServiceApp(IMapper mapper, ICategoriaService service) : IC
         return await service.CreateModel(categoria);
     }
 
-    public async Task<bool> AtualizarCategoria(UpdateCategoriaDto categoriaDto)
+    public async Task<bool> AtualizarCategoria(int id, UpdateCategoriaDto categoriaDto)
     {
-        var categoria = mapper.Map<Categoria>(categoriaDto);
+        var categoria = service.GetModelById(id);
+        if (categoria == null) return false;
+        mapper.Map(categoriaDto, categoria);
         return await service.UpdateModel(categoria);
     }
 

@@ -29,9 +29,11 @@ public class DespesaServiceApp(IMapper mapper, IDespesaService service) : IDespe
         return await service.CreateModel(despesa);
     }
 
-    public async Task<bool> AtualizarDespesa(UpdateDespesaDto despesaDto)
+    public async Task<bool> AtualizarDespesa(int id, UpdateDespesaDto despesaDto)
     {
-        var despesa = mapper.Map<Despesa>(despesaDto);
+        var despesa = service.GetModelById(id);
+        if (despesa == null) return false;
+        mapper.Map(despesaDto, despesa);
         return await service.UpdateModel(despesa);
     }
 
