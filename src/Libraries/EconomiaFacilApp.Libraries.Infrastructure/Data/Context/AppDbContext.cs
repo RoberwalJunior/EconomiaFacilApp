@@ -1,9 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EconomiaFacilApp.Libraries.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using EconomiaFacilApp.Libraries.Infrastructure.Data.Modelos;
 
 namespace EconomiaFacilApp.Libraries.Infrastructure.Data.Context;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+public class AppDbContext(DbContextOptions<AppDbContext> options) 
+    : IdentityDbContext<UsuarioComAcesso, PerfilDeAcesso, int>(options)
 {
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Despesa> Despesas { get; set; }

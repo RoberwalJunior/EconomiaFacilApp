@@ -6,12 +6,19 @@ using EconomiaFacilApp.Libraries.Domain.Interfaces.Services;
 using EconomiaFacilApp.Libraries.Domain.Services;
 using EconomiaFacilApp.Libraries.Application.Interfaces;
 using EconomiaFacilApp.Libraries.Application.ServiceApp;
+using EconomiaFacilApp.Libraries.Infrastructure.Data.Modelos;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+builder.Services
+    .AddIdentityApiEndpoints<UsuarioComAcesso>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
