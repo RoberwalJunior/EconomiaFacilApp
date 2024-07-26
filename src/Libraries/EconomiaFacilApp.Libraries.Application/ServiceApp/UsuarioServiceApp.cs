@@ -13,10 +13,19 @@ public class UsuarioServiceApp(IMapper mapper, IUsuarioService service,
     private readonly IUsuarioService service = service;
     private readonly ITokenServiceApp tokenService = tokenService;
 
-    public async Task<string> Login(LoginUsuarioDto dto)
+    public async Task<ReadTokenDto> Login(LoginUsuarioDto dto)
     {
         var usuario = await service.Login(dto.Email!, dto.Password!);
-        return tokenService.GenereteToken(usuario);
+        var token = tokenService.GenereteToken(usuario);
+
+        return new ReadTokenDto()
+        {
+            ChaveToken = token,
+            TipoToken = "bearer",
+            UsuarioId = usuario.Id,
+            UsuarioUserName = usuario.UserName,
+            UsuarioEmail = usuario.Email
+        };
     }
 
     public async Task Logout()

@@ -13,7 +13,8 @@ public class UsuarioController(IUsuarioServiceApp usuarioService) : ControllerBa
     [HttpPost("Login")]
     public async Task<IActionResult> Login([FromBody] LoginUsuarioDto dto)
     {
-        return Ok(await service.Login(dto));
+        var tokenDto = await service.Login(dto);
+        return new ObjectResult(tokenDto);
     }
 
     [HttpPost("Logout")]
@@ -24,9 +25,10 @@ public class UsuarioController(IUsuarioServiceApp usuarioService) : ControllerBa
     }
 
     [HttpPost("Registrar")]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<IActionResult> RegistrarNovoUsuario([FromBody] CreateUsuarioDto usuarioDto)
     {
         await service.RegistrarUsuario(usuarioDto);
-        return Ok("Usuario cadastrado com exito!");
+        return StatusCode(StatusCodes.Status201Created);
     }
 }

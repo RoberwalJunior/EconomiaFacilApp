@@ -21,13 +21,13 @@ public class TokenServiceApp(IConfiguration configuration) : ITokenServiceApp
         };
 
         var chave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Key"]!));
-
-        var signingCredentials = new SigningCredentials(chave,
-            SecurityAlgorithms.HmacSha256);
+        var signingCredentials = new SigningCredentials(chave, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken
             (
-                expires: DateTime.Now.AddMinutes(10),
+                issuer: configuration["JWT:Issuer"],
+                audience: configuration["JWT:Audience"],
+                expires: DateTime.Now.AddHours(2),
                 claims: claims,
                 signingCredentials: signingCredentials
             );
