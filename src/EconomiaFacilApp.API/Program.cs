@@ -6,7 +6,7 @@ using EconomiaFacilApp.Libraries.Domain.Interfaces.Services;
 using EconomiaFacilApp.Libraries.Domain.Services;
 using EconomiaFacilApp.Libraries.Application.Interfaces;
 using EconomiaFacilApp.Libraries.Application.ServiceApp;
-using EconomiaFacilApp.Libraries.Infrastructure.Data.Modelos;
+using EconomiaFacilApp.Libraries.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,9 +27,11 @@ builder.Services.AddTransient<IDespesaRepository, DespesaRepository>();
 
 builder.Services.AddTransient<ICategoriaService, CategoriaService>();
 builder.Services.AddTransient<IDespesaService, DespesaService>();
+builder.Services.AddTransient<IUsuarioService, UsuarioService>();
 
 builder.Services.AddTransient<ICategoriaServiceApp, CategoriaServiceApp>();
 builder.Services.AddTransient<IDespesaServiceApp, DespesaServiceApp>();
+builder.Services.AddTransient<IUsuarioServiceApp, UsuarioServiceApp>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

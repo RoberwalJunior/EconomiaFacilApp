@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EconomiaFacilApp.Libraries.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using EconomiaFacilApp.Libraries.Infrastructure.Data.Modelos;
+using EconomiaFacilApp.Libraries.Domain.Entities.Identity;
 
 namespace EconomiaFacilApp.Libraries.Infrastructure.Data.Context;
 
