@@ -7,13 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8D534AFC-A97
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{0DD6838E-9B28-460D-A312-9CB1409C09AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EconomiaFacilApp.Libraries.Domain", "src\Libraries\EconomiaFacilApp.Libraries.Domain\EconomiaFacilApp.Libraries.Domain.csproj", "{E3A71B65-67A4-4AB9-82A7-4C3FE051CB8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EconomiaFacilApp.Libraries.Domain", "src\Libraries\EconomiaFacilApp.Libraries.Domain\EconomiaFacilApp.Libraries.Domain.csproj", "{E3A71B65-67A4-4AB9-82A7-4C3FE051CB8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EconomiaFacilApp.Libraries.Infrastructure", "src\Libraries\EconomiaFacilApp.Libraries.Infrastructure\EconomiaFacilApp.Libraries.Infrastructure.csproj", "{7232846B-D882-46E4-833D-95DE277B0422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EconomiaFacilApp.Libraries.Infrastructure", "src\Libraries\EconomiaFacilApp.Libraries.Infrastructure\EconomiaFacilApp.Libraries.Infrastructure.csproj", "{7232846B-D882-46E4-833D-95DE277B0422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EconomiaFacilApp.API", "src\EconomiaFacilApp.API\EconomiaFacilApp.API.csproj", "{3A6D52A2-224A-43C2-A36C-9A8AA470FE72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EconomiaFacilApp.API", "src\EconomiaFacilApp.API\EconomiaFacilApp.API.csproj", "{3A6D52A2-224A-43C2-A36C-9A8AA470FE72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EconomiaFacilApp.Libraries.Application", "src\Libraries\EconomiaFacilApp.Libraries.Application\EconomiaFacilApp.Libraries.Application.csproj", "{FED79454-9E7E-402D-8105-4714B8151F18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EconomiaFacilApp.Libraries.Application", "src\Libraries\EconomiaFacilApp.Libraries.Application\EconomiaFacilApp.Libraries.Application.csproj", "{FED79454-9E7E-402D-8105-4714B8151F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EconomiaFacilApp.App", "src\EconomiaFacilApp.App\EconomiaFacilApp.App.csproj", "{E6302803-87E5-43E5-8825-4C33BE579F36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,12 @@ Global
 		{FED79454-9E7E-402D-8105-4714B8151F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FED79454-9E7E-402D-8105-4714B8151F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FED79454-9E7E-402D-8105-4714B8151F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6302803-87E5-43E5-8825-4C33BE579F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6302803-87E5-43E5-8825-4C33BE579F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6302803-87E5-43E5-8825-4C33BE579F36}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E6302803-87E5-43E5-8825-4C33BE579F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6302803-87E5-43E5-8825-4C33BE579F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6302803-87E5-43E5-8825-4C33BE579F36}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +55,7 @@ Global
 		{7232846B-D882-46E4-833D-95DE277B0422} = {0DD6838E-9B28-460D-A312-9CB1409C09AC}
 		{3A6D52A2-224A-43C2-A36C-9A8AA470FE72} = {8D534AFC-A974-47DB-8370-EA46A92401AA}
 		{FED79454-9E7E-402D-8105-4714B8151F18} = {0DD6838E-9B28-460D-A312-9CB1409C09AC}
+		{E6302803-87E5-43E5-8825-4C33BE579F36} = {8D534AFC-A974-47DB-8370-EA46A92401AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C79BE16-08BD-4845-907B-C87BB09DB8D8}
