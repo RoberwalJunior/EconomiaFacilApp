@@ -5,6 +5,9 @@ namespace EconomiaFacilApp.Libraries.Application.AutoMapper.Dtos.Despesas;
 public class CreateDespesaDto
 {
     [Required]
+    public int UsuarioId { get; set; }
+
+    [Required]
     public int CategoriaId { get; set; }
 
     [Required]

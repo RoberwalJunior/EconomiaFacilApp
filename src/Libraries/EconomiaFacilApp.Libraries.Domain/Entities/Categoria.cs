@@ -7,6 +7,8 @@ public class Categoria
 {
     public int Id { get; set; }
 
+    public int UsuarioId { get; set; }
+
     [Required]
     [StringLength(100)]
     public string? Nome { get; set; }
