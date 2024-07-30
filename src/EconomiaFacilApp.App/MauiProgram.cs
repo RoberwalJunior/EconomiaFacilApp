@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using EconomiaFacilApp.App.Services;
+using Microsoft.Extensions.Logging;
 
 namespace EconomiaFacilApp.App;
 
@@ -16,8 +17,11 @@ public static class MauiProgram
             });
 
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
+
+        builder.Services.AddHttpClient();
+        builder.Services.AddSingleton<ApiService>();
 
         return builder.Build();
     }

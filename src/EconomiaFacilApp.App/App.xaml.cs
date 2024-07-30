@@ -1,12 +1,16 @@
-﻿namespace EconomiaFacilApp.App
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿using EconomiaFacilApp.App.Pages;
+using EconomiaFacilApp.App.Services;
 
-            MainPage = new AppShell();
-        }
+namespace EconomiaFacilApp.App;
+
+public partial class App : Application
+{
+    private readonly ApiService _apiService;
+
+    public App(ApiService apiService)
+    {
+        InitializeComponent();
+        _apiService = apiService;
+        MainPage = new NavigationPage(new InscricaoPage(_apiService));
     }
 }
